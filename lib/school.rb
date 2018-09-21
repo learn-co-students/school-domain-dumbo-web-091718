@@ -29,14 +29,11 @@ class School
   end
 
   def sort
-    sortArr = []
-    @roster.values.each do |students|
-     sortArr <<  students.sort
-     # binding.pry
-    # @roster.values.sort
-    # binding.pry
+    newHash = Hash.new
+    @roster.collect do |grade, students|
+       newHash[grade] = students.sort
     end
-    return sortArr
+    return newHash
   end
 
 end
