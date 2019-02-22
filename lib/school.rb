@@ -20,7 +20,7 @@ class School
   end
   
   def sort
-    sorted_values = @roster.each do |k, v|
+    @roster.each do |k, v|
       v.sort!
     end.sort_by do |k, v|
       k
